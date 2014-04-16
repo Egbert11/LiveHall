@@ -19,21 +19,11 @@
             	<li class="l_hot current">
                 	<div class="li_content">
                     	<em class="l_hot_em"></em><a class="l_a_v1" href="javascript:;">热门推荐</a>
-                    </div>
+                    </div>    
                 </li>
-            	<li class="has_l_2 l_etm">
+            	<li class="l_etm">
                 	<div class="li_content">
-                    	<em class="l_etm_em"></em><a class="l_a_v1" href="javascript:;">娱乐直播</a><i></i>
-                    </div>
-                	<div class="l_2_list">
-                    	<a href="javascript:;">全部</a>
-                    	<a href="javascript:;">梦幻西游</a>
-                    	<a href="javascript:;">天下</a>
-                    	<a href="javascript:;">大话西游</a>
-                    	<a href="javascript:;">武魂</a>
-                    	<a href="javascript:;">倩女幽魂</a>
-                    	<a href="javascript:;">炉石传说</a>
-                    	<a href="javascript:;">其他</a>
+                    	<em class="l_etm_em"></em><a class="l_a_v1" href="javascript:;">娱乐直播</a>
                     </div>
                 </li>
             	<li class="has_l_2 l_game">
@@ -121,7 +111,11 @@
                         </div>
                     </li>
                 </ul>
-                <div class="picwall_banner"></div>
+                
+                <div class="picwall_banner">
+                	<div></div>
+                </div>
+                
                 <ul class="picwall_ul picwall_ul_right">
                 	<li>
                     	<img src="../image/test/test.png">
@@ -176,7 +170,92 @@
         
         </div>
     </div>
-	<script data-main="../js/index" src="../js/lib/require.js"></script>
+	<!--<script data-main="../js/index" src="../js/lib/require.js"></script>-->
+    
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript">
 	
+	$(function(){
+		$('.left_bar_list .li_content').live('click',function(){
+			
+			$('.left_bar_list li').removeClass('current');
+			
+			if($(this).parent().hasClass('has_l_2')){
+				var nowList = $(this).parent().find('.l_2_list');
+				var nowListA = $(this).parent().find('.l_2_list a');
+				var nowSelect = false;
+				$('.left_bar_list li .l_2_list').slideUp(200);
+				if(nowList.css('display') != 'block'){
+					nowList.slideDown(200);
+				}else{
+					$(this).parent().addClass('current');
+				}
+				for(var i=0; i<nowListA.length; i++){
+					if(nowListA.eq(i).hasClass('current')){
+						nowSelect = true;
+						break;
+					}
+				}
+				if(!nowSelect){
+					$(this).parent().addClass('current');
+				}
+			}else{
+				$('.left_bar_list li .l_2_list a').removeClass('current');
+				$('.left_bar_list li .l_2_list').slideUp(200);
+				$(this).parent().addClass('current');
+			}
+		});
+		
+		$('.left_bar_list .l_2_list a').live('click',function(){
+			$(this).parent().parent().removeClass('current');
+			$('.left_bar_list .l_2_list a').removeClass('current');
+			$(this).addClass('current');
+		});
+		
+	});
+	
+	function picWall(){
+		var picWall = {
+			init : function(){
+				this.box = $('#picwall');
+				this.follow = $('#picwall_follow');
+				this.list_pic = $('#picwall .picwall_ul li').not('#picwall_refresh');
+				this.list_refresh = $('#picwall_refresh');
+				this.addHoverEvent();
+			},
+			addHoverEvent : function(){
+				var _this = this;
+				this.list_pic.mouseover(function(e){
+					_this.follow.html($(this).find('.detail').html());
+				}).mouseout(function(e){
+					_this.follow.stop().animate({
+						opacity: 0
+					},200,
+					function() {
+						$(this).hide();
+					});
+				}).mousemove(function(e){
+					_this.showPop(e, this)
+				});
+			},
+			showPop : function(e , o){
+				var posY = e.pageY - this.box.offset().top;
+				var posX = e.pageX - this.box.offset().left;
+				this.follow.css({
+					left: posX + 10,
+					top: posY + 10,
+					display: 'block'
+				}).stop().animate({
+					opacity: 1
+				},100);
+			}
+		};
+		return picWall;
+	}
+	
+	var indexPicWall = new picWall();
+    indexPicWall.init();
+	
+    </script>
 </body>
 </html>
