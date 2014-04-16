@@ -3,9 +3,6 @@ require.config({
 	baseUrl: '../js/lib',
 	// shim require.js加载非AMD规范的模块
 	shim: {
-		zepto: {
-			exports: 'zepto'
-		},
 		underscore: {
 			exports: '_'
 		},
@@ -19,7 +16,6 @@ require.config({
 	},
 	// paths 指定各个模块位于基目录的路径
 	paths: {
-		'zepto': 'zepto',
 		'underscore': 'underscore',
 		'backbone': 'backbone'
 	}

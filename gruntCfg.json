@@ -4,13 +4,11 @@
       "options": {
         "baseUrl": "src/js/lib",
         "paths": {
-          "$": "zepto",
           "_": "underscore",
           "B": "backbone"
         },
         "web": {
           "include": [
-            "$",
             "_",
             "B"
           ],
