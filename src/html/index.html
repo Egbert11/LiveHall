@@ -112,8 +112,26 @@
                     </li>
                 </ul>
                 
-                <div class="picwall_banner">
-                	<div></div>
+                <div id="picwall_banner">
+                    <div class="focus">
+                    	<div class="focus_img_bar">
+                        	<a class="imgbox" href="javascript:;">
+                            <img src="../image/test/test.png" alt="banner" width="290" height="320" />
+                            </a>
+                            <a class="imgbox" href="javascript:;">
+                                <img src="../image/test/test.png" alt="banner" width="290" height="320" />
+                            </a>
+                            <a class="imgbox" href="javascript:;">
+                                <img src="../image/test/test.png" alt="banner" width="290" height="320" />
+                            </a>
+                            <a class="imgbox" href="javascript:;">
+                                <img src="../image/test/test.png" alt="banner" width="290" height="320" />
+                            </a>
+                        </div>
+                        <div class="focus_control"><em class="current"></em><em></em><em></em></div>
+                        <div class="focus_run f_left"></div>
+                        <div class="focus_run f_right"></div>
+                    </div>
                 </div>
                 
                 <ul class="picwall_ul picwall_ul_right">
@@ -159,9 +177,7 @@
                     </li>
                 	<li id="picwall_refresh"></li>
                 </ul>
-                <div id="picwall_follow">
-                	
-                </div>
+                <div id="picwall_follow"></div>
             </div>
             <div class="list_area"></div>
         </div>
@@ -173,9 +189,11 @@
 	<!--<script data-main="../js/index" src="../js/lib/require.js"></script>-->
     
     <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
     <script type="text/javascript">
 	
 	$(function(){
+		
 		$('.left_bar_list .li_content').live('click',function(){
 			
 			$('.left_bar_list li').removeClass('current');
@@ -256,6 +274,61 @@
 	var indexPicWall = new picWall();
     indexPicWall.init();
 	
+	function C_focus(){
+		this.focusObj = $('focus');
+		this.focusCtrHtml = '<em class="current"></em>';
+		this.focusImgs = $('.focus .imgbox');
+		this.focusLen = $('.focus .imgbox').length;
+		this.focusPerWidth = $('.focus').width();
+		this.focusNow = 0;
+	}
+	
+	$('.focus').mouseover(function(){
+		$('.focus_run').show();
+	}).mouseout(function(){
+		$('.focus_run').hide();
+	});
+	
+	var focusCtrHtml = '<em class="current"></em>';
+	var focusImgs = $('.focus .imgbox');
+	var focusLen = $('.focus .imgbox').length;
+	var focusPerWidth = $('.focus').width();
+	var focusNow = 0;
+	
+	for(var i=1; i<focusLen; i++){
+		focusCtrHtml += '<em></em>';
+	}
+	$('.focus_control').html(focusCtrHtml);
+	
+	$('.focus_control em').live('click',function(){
+		focusNow = $(this).index();
+		move(focusNow,0);
+	});
+	
+	$('.focus_run').live('click',function(){
+		if($(this).hasClass('f_left')){
+			focusNow --;
+			move(focusNow,-1);
+		}else{
+			focusNow ++;
+			move(focusNow,1);
+		}
+	})
+	
+	function move(index,type){
+		if(type == -1 && index == -1){
+			focusNow = focusLen-1;
+			$('.focus_img_bar').animate({'left': - (focusLen-1) * focusPerWidth + 'px'},200);
+		}else if(type == 1 && index == focusLen){
+			focusNow = 0;
+			$('.focus_img_bar').animate({'left':'0px'},200);
+		}else{
+			$('.focus_img_bar').animate({'left': - index * focusPerWidth + 'px'},200);
+		}
+		setTimeout(function(){
+			$('.focus_control em').removeClass('current').eq(focusNow).addClass('current');
+		},200);
+	}
 	
     </script>
 </body>

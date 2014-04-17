@@ -31,13 +31,12 @@
 
 .content{ width:720px; height:auto; float:left;}
 #picwall{height:322px; width:720px; background:url(../image/index/bg_picwall.png) no-repeat; position:relative;}
-#picwall .picwall_banner{float:left; margin-left:1px; margin-top:1px; width:290px; height:320px;}
 #picwall .picwall_ul{width:214px; height:322px; float:left;}
 #picwall .picwall_ul li{float:left; width:106px; height:106px; margin-left:1px; margin-top:1px; cursor:pointer;}
 #picwall .picwall_ul li .detail{display:none;}
 #picwall_refresh{background:url(../image/index/bg_leftbarlist.png) -108px -43px no-repeat;}
 #picwall_refresh:hover{background-position:-108px -150px;}
-#picwall_follow{position:absolute; display:none; top:10px; left:10px; padding:4px 4px 6px; background:#fff;}
+#picwall_follow{position:absolute; display:none; top:10px; left:10px; padding:4px 4px 6px; background:#fff; box-shadow:0px 0px 8px #666;}
 #picwall_follow p{margin-top:6px;}
 #picwall_follow p em{ vertical-align:top; margin:0 7px 0 3px; display:inline-block;}
 #picwall_follow p em.a_type{height:16px; width:18px; display:inline-block; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
@@ -45,6 +44,19 @@
 #picwall_follow p em.a_audio{background-position:-81px -32px;}
 #picwall_follow p span{ vertical-align:top; color:#333; display:inline-block; height:17px; line-height:17px;}
 #picwall_follow p span.a_people i{display:inline-block; width:16px; height:16px; margin-right:2px; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+#picwall_banner{float:left; margin-left:1px; margin-top:1px; width:290px; height:320px;}
+#picwall_banner .focus{width:290px; height:320px; overflow:hidden; position:relative;}
+#picwall_banner .focus .focus_img_bar{position:absolute; left:0px; top:0px; width:3000px; height:320px;}
+#picwall_banner .focus .focus_img_bar a{height:320px; width:290px; float:left; display:inline-block;}
+#picwall_banner .focus .focus_control{position:absolute; bottom:6px; width:100%; text-align:center; z-index:1;}
+#picwall_banner .focus .focus_control em{display:inline-block; height:13px; width:14px; margin:0 1px; background:url(../image/index/bg_leftbarlist.png) -232px -22px no-repeat; cursor:pointer;}
+#picwall_banner .focus .focus_control em.current{background-position:-232px -6px;}
+#picwall_banner .focus .focus_run{position:absolute; display:none; height:40px; width:40px; background:url(../image/index/bg_leftbarlist.png) no-repeat; cursor:pointer;}
+#picwall_banner .focus .f_left{background-position:-216px -43px; left:8px; top:125px;}
+#picwall_banner .focus .f_right{background-position:-258px -43px; top:125px; right:8px;}
+#picwall_banner .focus .f_left:hover{background-position:-216px -84px;}
+#picwall_banner .focus .f_right:hover{background-position:-258px -84px;}
+
 
 .right_bar{height:1000px; width:260px; background:url(../image/index/bg_rightbar.png) no-repeat; float:left;}
 
