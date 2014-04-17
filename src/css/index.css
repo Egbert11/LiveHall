@@ -36,7 +36,7 @@
 #picwall .picwall_ul li .detail{display:none;}
 #picwall_refresh{background:url(../image/index/bg_leftbarlist.png) -108px -43px no-repeat;}
 #picwall_refresh:hover{background-position:-108px -150px;}
-#picwall_follow{position:absolute; display:none; top:10px; left:10px; padding:4px 4px 6px; background:#fff; box-shadow:0px 0px 8px #666;}
+#picwall_follow{position:absolute; display:none; top:10px; left:10px; padding:4px 4px 6px; background:#fff; box-shadow:0px 0px 4px #aaa; z-index:2;}
 #picwall_follow p{margin-top:6px;}
 #picwall_follow p em{ vertical-align:top; margin:0 7px 0 3px; display:inline-block;}
 #picwall_follow p em.a_type{height:16px; width:18px; display:inline-block; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
@@ -57,7 +57,15 @@
 #picwall_banner .focus .f_left:hover{background-position:-216px -84px;}
 #picwall_banner .focus .f_right:hover{background-position:-258px -84px;}
 
-
+.list_area{width:720px;}
+.list_content_ul li{height:140px; width:155px; float:left; position:relative; overflow:hidden; border:1px solid #f7f7f7; border-radius:2px; margin:18px 0 0 18px ; background:#ccc; box-shadow:0px 1px 3px #bbb;}
+.list_content_ul li .list_go{position:absolute; top:0; left:0; width:155px; height:96px; display:none;}
+.list_content_ul li .list_go i{position:absolute; top:24px; left:53px; height:48px; width:48px; background:url(../image/index/bg_leftbarlist.png) -53px -117px no-repeat;}
+.list_content_ul li .list_bottom{position:absolute; bottom:0; width:155px; height:44px;}
+.list_content_ul li .list_bottom .lb1{height:20px; width:150px; background:#fff; opacity:0.7; filter:alpha(opacity=70); text-align:right; padding-right:5px; line-height:20px;}
+.list_content_ul li .list_bottom .lb1 i{display:inline-block; width:16px; height:16px; margin:2px 2px 0 0; vertical-align:top; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+.list_content_ul li .list_bottom .lb2{height:24px; width:155px; background:#fff;line-height:24px;}
+.list_content_ul li .list_bottom .lb2 em{display:inline-block; vertical-align:top; margin:4px 4px 0px 6px;}
 .right_bar{height:1000px; width:260px; background:url(../image/index/bg_rightbar.png) no-repeat; float:left;}
 
 
