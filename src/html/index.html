@@ -263,9 +263,157 @@
             </div>
         </div>
     </div>
-	
     <div class="right_bar">
-    
+        <div class="myInfo">
+            <img src="../image/index/avatar.png">
+            <div class="intro">
+                <span class="name">HIFI无极限</span>
+                <p><span class="zhubo">明星：</span>
+                    <img src="../image/anchorLevel/18.png" />
+                </p>
+                <p><span class="rank">财富：</span>
+                    <img src="../image/anchorLevel/59.png" />
+                </p>
+                <p><span class="cTicket">C 券：</span>
+                    <span class="number">168,000,000</span>
+                    <a href="javascript:void(0)">充值</a>
+                </p>
+            </div>
+            <div class="live"></div>
+        </div>
+        <div class="myFollowing">
+            <ul class="follow-tab">
+                <li class="active"><a href="javascript:void(0);" name="tab1">关注的主播</a></li>
+                <li><a href="javascript:void(0);" name="tab1">常用的房间</a></li>
+            </ul>
+            <ul class="follow-list">
+                <li>
+                    <img src="../image/index/avatar1.png">
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info">
+                            <div class="living"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                </li>   
+                <li>
+                    <img src="../image/index/avatar1.png">
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info" style="display:none">
+                            <div class="living"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                </li> 
+                <li>
+                    <img src="../image/index/avatar1.png">
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info">
+                            <div class="listening"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                </li>    	
+            </ul>
+        </div>
+        <div class="seemore"><a href="#">查看更多>></a>
+        </div>
+        <div class="zhuboRank">
+            <div class="top5_title">
+                <span>TOP5主播榜</span>
+                <div class="question-mark"></div>
+            </div>
+            <ul class="tab_style">
+                <li class="active"><a href="javascript:void(0)" id="1">日</a></li>
+                <li><a href="javascript:void(0)" id="2">周</a></li>
+                <li><a href="javascript:void(0)" id="3">月</a></li>
+                <li><a href="javascript:void(0)" id="4">总</a></li>
+            </ul>
+            <ul class="rank">
+                <li>
+                	<div class="avatar_rank">
+                    	<img src="../image/index/avatar1.png">
+                        <div class="rank no1"></div>
+                    </div>
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info">
+                            <div class="living"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div> 
+                    <div class="level"></div>   
+                </li>   
+                <li>
+                    <div class="avatar_rank">
+                    	<img src="../image/index/avatar1.png">
+                        <div class="rank no2"></div>
+                    </div>
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info" style="display:none">
+                            <div class="living"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>  
+                    <div class="level"></div>   
+                </li> 
+                <li>
+                    <div class="avatar_rank">
+                    	<img src="../image/index/avatar1.png">
+                        <div class="rank no3"></div>
+                    </div>
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info">
+                            <div class="listening"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                    <div class="level"></div> 
+                </li>  
+                <li>
+                    <div class="avatar_rank">
+                    	<img src="../image/index/avatar1.png">
+                        <div class="rank no4"></div>
+                    </div>
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info" style="display:none">
+                            <div class="living"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                    <div class="level"></div> 
+                </li> 
+                <li>
+                    <div class="avatar_rank">
+                    	<img src="../image/index/avatar1.png">
+                        <div class="rank no5"></div>
+                    </div>
+                    <div class="followingIntro">
+                        <span class="name">HIFI无极限</span>
+                        <div class="info">
+                            <div class="listening"></div>
+                            <div class="head"></div>
+                            <span class="number">82,000</span>
+                        </div>
+                    </div>    
+                    <div class="level"></div> 
+                </li>  	
+            </ul>
+        </div>
+    </div>
     </div>
 </div>
 
@@ -323,6 +471,20 @@ $(function(){
 	
 	var indexPicWall = new picWall();
 	showBanner();
+	
+	//右侧top5主播榜的hover监听
+	$("ul.rank li").hover(function(){
+		$(this).css("background","#f9e9e7");
+		var level = $(this).find(".level");
+		level.css("background","url(../image/index/bg_leftbarlist.png) no-repeat -52px -86px");
+		level.live("click",function(){
+			$(this).css("background","url(../image/index/bg_leftbarlist.png) no-repeat -79px -86px");
+		});
+	},
+	function(){
+		$(this).css("background","none");
+		$(this).find(".level").css("background","url(../image/anchorLevel/18.png) no-repeat 0px 0px");
+	});
 	
 });
 
