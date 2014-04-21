@@ -1,0 +1,149 @@
+/* CSS Document */
+@charset "utf-8";
+
+/* zs 2014-04-18 */
+.main{width:1100px; height:2000px; margin:0 auto; background:url(../image/index/bg_main.png) repeat-y;}
+.left_bar{height:700px; width:120px; background:url(../image/index/bg_leftbar.png) no-repeat; float:left;}
+.left_bar ul li{width:120px; line-height:38px; font-size:14px; cursor:pointer;}
+.left_bar ul li.current .li_content{background:url(../image/index/bg_leftbarlist.png) -108px 0 no-repeat;}
+.left_bar ul li a{color:#cddbea; display:inline-block; vertical-align:middle;}
+.left_bar ul li.current a{color:#fff;}
+.left_bar ul li:hover a.l_a_v1{color:#fff;}
+.left_bar ul li .li_content{width:100%; height:100%;}
+.left_bar ul li .l_2_list{display:none;}
+.left_bar ul li .l_2_list a{height:36px; width:90px; color:#cddbea; font-size:12px; display:block; padding-left:30px; vertical-align:top;}
+.left_bar ul li .l_2_list a.current{background:url(../image/index/bg_leftbarlist.png) -108px 0 no-repeat; color:#fff;}
+.left_bar ul li .l_2_list a:hover{color:#fff; background:url(../image/index/bg_leftbarlist.png) -108px 0 no-repeat;} 
+.left_bar ul li em{height:18px; width:18px; display:inline-block; margin:11px 5px 0 9px; vertical-align:top; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+.left_bar ul li.l_hot em{ background-position:-6px -4px;}
+.left_bar ul li.l_etm em{background-position:-6px -29px;}
+.left_bar ul li.l_game em{background-position:-6px -57px;}
+.left_bar ul li.l_voice em{background-position:-6px -86px;}
+.left_bar ul li.l_rank em{background-position:-6px -117px;}
+.left_bar ul li.l_subscibe em{background-position:-6px -148px;}
+.left_bar ul li.l_hot:hover em,.left_bar ul li.current em.l_hot_em{background-position:-30px -4px;}
+.left_bar ul li.l_etm:hover em,.left_bar ul li.current em.l_etm_em{background-position:-30px -29px;}
+.left_bar ul li.l_game:hover em,.left_bar ul li.current em.l_game_em{background-position:-30px -57px;}
+.left_bar ul li.l_voice:hover em,.left_bar ul li.current em.l_voice_em{background-position:-30px -86px;}
+.left_bar ul li.l_rank:hover em,.left_bar ul li.current em.l_rank_em{background-position:-30px -117px;}
+.left_bar ul li.l_subscibe:hover em,.left_bar ul li.current em.l_subscibe_em{background-position:-30px -148px;}
+.left_bar ul li i{height:18px; width:18px; display:inline-block; margin-left:6px; vertical-align:middle; background:url(../image/index/bg_leftbarlist.png) -57px -4px no-repeat;}
+.left_bar ul li:hover i{background-position:-81px -4px;}
+
+.content{ width:720px; height:auto; float:left;}
+#picwall{height:322px; width:720px; background:url(../image/index/bg_picwall.png) no-repeat; position:relative;}
+#picwall .picwall_ul{width:214px; height:322px; float:left;}
+#picwall .picwall_ul li{float:left; width:106px; height:106px; margin-left:1px; margin-top:1px; cursor:pointer; position:relative; overflow:hidden;}
+#picwall .picwall_ul li .ctr_con{position:absolute;}
+#picwall .picwall_ul li .ctr_item{width:106px; height:106px; overflow:hidden; margin-bottom:1px;}
+#picwall .picwall_ul li .detail{display:none;}
+#picwall .picwall_refresh{background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+#picwall .unlocked{background-position:-108px -43px}
+#picwall .unlocked:hover{background-position:-108px -150px;}
+#picwall .locked{background-position:-108px -258px;}
+#picwall .loading,#picwall .loading:hover{background:url(../image/index/picwall_loading.gif) no-repeat; background-position:-1px 0;}
+
+#picwall_follow{position:absolute; display:none; top:10px; left:10px; padding:4px 4px 6px; background:#fff; box-shadow:0px 0px 4px #a5a5a5; z-index:2;}
+#picwall_follow p{margin-top:6px;}
+#picwall_follow p em{ vertical-align:top; margin:0 7px 0 3px; display:inline-block;}
+#picwall_follow p em.a_type{height:16px; width:18px; display:inline-block; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+#picwall_follow p em.a_video{background-position:-57px -32px;}
+#picwall_follow p em.a_audio{background-position:-81px -32px;}
+#picwall_follow p span{ vertical-align:top; color:#333; display:inline-block; height:17px; line-height:17px;}
+#picwall_follow p span.a_people i{display:inline-block; width:16px; height:16px; margin-right:2px; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+#picwall_banner{float:left; margin-left:1px; margin-top:1px; width:290px; height:320px;}
+#picwall_banner .focus{width:290px; height:320px; overflow:hidden; position:relative;}
+#picwall_banner .focus .focus_img_bar{position:absolute; left:0px; top:0px; width:3000px; height:320px;}
+#picwall_banner .focus .focus_img_bar a{height:320px; width:290px; float:left; display:inline-block;}
+#picwall_banner .focus .focus_control{position:absolute; bottom:6px; width:100%; text-align:center; z-index:1;}
+#picwall_banner .focus .focus_control em{display:inline-block; height:13px; width:14px; margin:0 1px; background:url(../image/index/bg_leftbarlist.png) -232px -22px no-repeat; cursor:pointer;}
+#picwall_banner .focus .focus_control em.current{background-position:-232px -6px;}
+#picwall_banner .focus .focus_run{position:absolute; display:none; height:40px; width:40px; background:url(../image/index/bg_leftbarlist.png) no-repeat; cursor:pointer;}
+#picwall_banner .focus .f_left{background-position:-216px -43px; left:8px; top:125px;}
+#picwall_banner .focus .f_right{background-position:-258px -43px; top:125px; right:8px;}
+#picwall_banner .focus .f_left:hover{background-position:-216px -84px;}
+#picwall_banner .focus .f_right:hover{background-position:-258px -84px;}
+
+/* 直播列表 */
+.live_list_area{width:720px;}
+.live_list_content li{height:140px; width:155px; float:left; position:relative; overflow:hidden; border:1px solid #e8e8e8; border-top:none; border-radius:4px; margin:12px 0 0 18px ; box-shadow:0px 1px 1px #f7f7f7;}
+.live_list_content li .list_go{position:absolute; top:0; left:0; width:155px; height:96px; display:none;}
+.live_list_content li .list_go i{position:absolute; top:24px; left:53px; height:48px; width:48px; background:url(../image/index/bg_leftbarlist.png) -53px -117px no-repeat;}
+.live_list_content li .list_bottom{position:absolute; bottom:0; width:155px; height:44px;}
+.live_list_content li .list_bottom .lb1{height:20px; width:150px; background:#fff; opacity:0.7; filter:alpha(opacity=70); text-align:right; padding-right:5px; line-height:20px;}
+.live_list_content li .list_bottom .lb1 i{display:inline-block; width:16px; height:16px; margin:2px 2px 0 0; vertical-align:top; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+.live_list_content li .list_bottom .lb2{height:24px; width:155px; background:#fff;line-height:24px;}
+.live_list_content li .list_bottom .lb2 em{display:inline-block; vertical-align:top; margin:4px 4px 0px 6px;}
+.live_list_top{height:16px; margin:20px 0 0 18px; width:682px; position:relative;}
+.live_list_top a{position:absolute; right:0px; top:0px;}
+.live_list_top a:hover{color:#000;}
+.live_list_top h4{color:#585858; font-size:15px; line-height:15px;}
+.live_list_top h4 em{display:inline-block; height:16px; width:18px; margin-right:6px; vertical-align:top; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+.anchor_list_top h4 em{background-position:-27px -275px;}
+.game_list_top h4 em{background-position:-51px -275px;}
+
+/* hjm 2014-04-18 */
+.right_bar{height:700px; width:260px; background:url(../image/index/bg_rightbar.png) no-repeat; float:left;}
+.right_bar .myInfo{ width:220px; padding:20px 20px 0 20px;}
+.right_bar .myInfo .photo{ width:60px; height:60px; margin-right:10px; float:left; border:1px solid #e8e8e8; border-top:none; overflow:hidden; border-radius:4px; box-shadow: 0px 1px 1px #f7f7f7;}
+.right_bar .myInfo .intro{ width:140px; font-size:14px; color:#333; line-height:14px; float:left;}
+.right_bar .myInfo .intro .name{ display:block; height:16px; color:#333;}
+.right_bar .myInfo .intro p{ margin-top:7px; font-family:\5b8b\4f53; font-size:12px;}
+.right_bar .myInfo .intro p span{ display:inline-block; float:left; vertical-align:top; margin-top:1px;}
+.right_bar .myInfo .intro p img{ display:inline-block; width:19px; height:16px; vertical-align:top; float:left; margin-right:6px;}
+.right_bar .myInfo .intro p a{ float:left; color:#3893c6; margin:0 0 0 10px; vertical-align:top; text-decoration:underline;}
+.right_bar .myInfo .intro p a:hover{ color:#1783c0;}
+.right_bar .myInfo .live{margin-top:11px;}
+.right_bar .myInfo #live{display:inline-block; height:30px; width:101px; background:url(../image/index/bg_leftbarlist.png) -3px -175px no-repeat;}
+.right_bar .myInfo #live:hover{background-position:-3px -206px;}
+.right_bar .myInfo #live:active{background-position:-3px -237px;}
+
+.myFollowing{ width:220px; margin-left:20px;}
+
+/* 通用tab样式 */
+ul.common_tab{ width:220px; height:22px; margin-top:12px; border-bottom:1px solid #d1c2bf; overflow:hidden;}
+ul.common_tab li{ float:left; display:inline; height:20px;}
+ul.common_tab li a{ display:inline-block; line-height:14px; height:14px; border-right:1px solid #d1c2bf; padding:0 10px; display:block; float:left;}
+ul.common_tab li.active{ border-bottom:2px solid #d1c2bf; color:#333;}
+ul.common_tab li.active a{ color:#333;}
+ul.common_tab li:last-child a{border-right:none;}
+ul.common_tab_top5 li a{padding:0 20px;}
+/* 更多关注的主播 */
+.moreFollowing{ width:215px; height:30px; margin:8px 0 0 20px}
+.moreFollowing a{text-align:center; font-size:12px; background:#f0e0eb; color:#787878; line-height:30px; text-decoration:none; display:block;}
+.moreFollowing a:hover{background:#fbf0ef;}
+/* 主播榜头部 */
+.rankAnchor{ width:214px; height:345px; margin:10px 0 0 20px; display:block}
+.rankAnchor_title{ width:230px; height:23px; display:block; font-size:15px; color:#333;}
+.rankAnchor_title .tips{ width:19px; height:19px; background:url(../image/index/bg_leftbarlist.png) no-repeat -81px -56px; display:inline-block; position:relative; top:4px; cursor:pointer;}
+/* 关注列表、常用的房间列表 */
+ul.follow_list_content,ul.went_list_content{ width:100%;}
+ul.follow_list_content li,ul.went_list_content li{ width:220px; height:44px; margin-top:10px; overflow:hidden;}
+ul.follow_list_content li img,ul.went_list_content li img{ margin-right:8px; float:left;}
+
+/* 排行榜列表 */
+ul.rank_list_content{ width:220px; overflow:hidden;}
+ul.rank_list_content li{ width:220px; height:44px; padding:5px 0; position:relative;}
+ul.rank_list_content li:hover{background:#f2e2eb;}
+ul.rank_list_content li .avatar_rank{ width:40px; height:40px; margin:0 10px 0 0; position:relative; float:left}
+ul.rank_list_content li .avatar_rank .rank{ position:absolute; width:15px; height:15px; bottom:0; right:0; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+ul.rank_list_content li .avatar_rank .no1{ background-position: -216px -126px}
+ul.rank_list_content li .avatar_rank .no2{ background-position: -216px -141px}
+ul.rank_list_content li .avatar_rank .no3{ background-position: -216px -156px}
+ul.rank_list_content li .avatar_rank .no4{ background-position: -216px -171px}
+ul.rank_list_content li .avatar_rank .no5{ background-position: -216px -186px}
+ul.rank_list_content li .level{position:absolute; height:20px; width:20px; right:6px; top:18px;}
+ul.rank_list_content li a.follow{ display:none; position:absolute; width:25px; height:25px; right:6px; top:16px; background:url(../image/index/bg_leftbarlist.png) no-repeat -52px -84px;}
+ul.rank_list_content li a.is_follow{background-position:-78px -84px;}
+/* 列表中的一些图标和介绍 */
+.list_intro{float:left;}
+.list_intro .name{font-size:12px; color:#333;}
+.list_intro p{margin-top:6px;}
+.list_intro p em{ vertical-align:top; margin-right:4px; display:inline-block;}
+.list_intro p em.a_type{height:16px; width:18px; display:inline-block; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+.list_intro p em.a_video{background-position:-57px -32px;}
+.list_intro p em.a_audio{background-position:-81px -32px;}
+.list_intro p span{ vertical-align:top; color:#666; display:inline-block; height:17px; line-height:17px;}
+.list_intro p span.a_people i{display:inline-block; width:16px; height:16px; margin-right:4px; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+.list_intro p em.a_room{background-position:-2px -275px;}
+
