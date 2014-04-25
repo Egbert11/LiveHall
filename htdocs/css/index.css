@@ -30,7 +30,7 @@
 .left_bar ul li i{height:18px; width:18px; display:inline-block; margin-left:6px; vertical-align:middle; background:url(../image/index/bg_leftbarlist.png) -57px -4px no-repeat;}
 .left_bar ul li:hover i{background-position:-81px -4px;}
 
-.content{ width:720px; height:auto; float:left;}
+
 #picwall{height:322px; width:720px; background:url(../image/index/bg_picwall.png) no-repeat; position:relative;}
 #picwall .picwall_ul{width:214px; height:322px; float:left;}
 #picwall .picwall_ul li{float:left; width:106px; height:106px; margin-left:1px; margin-top:1px; cursor:pointer; position:relative; overflow:hidden;}
@@ -147,3 +147,27 @@ ul.rank_list_content li a.is_follow{background-position:-78px -84px;}
 .list_intro p span.a_people i{display:inline-block; width:16px; height:16px; margin-right:4px; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
 .list_intro p em.a_room{background-position:-2px -275px;}
 
+/*hjm 2014-4-25 begin*/
+.myCC{ width:720px; height:auto; float:left;}
+.myCC .follow_anchor, .follow_room, .myRoom{width:100%;height:160px;}
+.myCC .follow_anchor_title, .follow_room_title, .myRoom_title {height: 16px;margin: 14px 0 0 18px;padding: 8px 0;width: 682px;position: relative;}
+.myCC .follow_anchor_title h4, .follow_room_title h4, .myRoom_title h4 {color: #585858;font-size: 15px;line-height: 15px;border-left: 2px solid #4bb1d7;padding-left: 6px;}
+.myCC .follow_anchor_title a, .follow_room_title a, .myRoom_title a {position: absolute; right: 0px; top: 5px; color: #999;}
+.myCC ul.follow_anchor_list,ul.follow_room_list,ul.myRoom_list {width:100%; margin:0 20px;overflow: hidden;}
+.myCC ul.follow_anchor_list li,ul.follow_room_list li,ul.myRoom_list li{ width:218px; height:40px; padding:10px 0; border:1px solid #e6e6e6;float:left; margin:0 10px 10px 0;position:relative;overflow:hidden;}
+.myCC ul.follow_anchor_list li img,ul.follow_room_list li img,ul.myRoom_list li img{ margin:0 8px 0 10px; float:left;border-radius:3px;}
+.myCC ul.follow_anchor_list li a.follow,ul.follow_room_list li a.follow,ul.myRoom_list li a.follow {display: inline-block;height: 60px;width: 60px;background: #666;position: absolute;right: -60px;opacity:0.5;top: 0px;}
+.myCC ul.follow_anchor_list li a.follow span,ul.follow_room_list li a.follow span,ul.myRoom_list li a.follow span{position: absolute;width: 60px;height: 30px;color:#FFF;text-align:center;line-height:30px;top: 15px;}
+
+/* 列表中的一些图标和介绍 */
+.myCC .list_intro{float:left;}
+.myCC .list_intro .name{font-size:12px; color:#333;}
+.myCC .list_intro p{margin-top:6px;}
+.myCC .list_intro p em{ vertical-align:top; margin-right:4px; display:inline-block;}
+.myCC .list_intro p em.a_type{height:16px; width:18px; display:inline-block; background:url(../image/index/bg_leftbarlist.png) no-repeat;}
+.myCC .list_intro p em.a_video{background-position:-57px -32px;}
+.myCC .list_intro p em.a_audio{background-position:-81px -32px;}
+.myCC .list_intro p span{ vertical-align:top; color:#666; display:inline-block; height:17px; line-height:17px;}
+.myCC .list_intro p span.a_people i{display:inline-block; width:16px; height:16px; margin-right:4px; background:url(../image/index/bg_leftbarlist.png) -57px -58px  no-repeat;}
+.myCC .list_intro p em.a_room{background-position:-2px -275px;}
+/*hjm 2014-4-25 end*/
